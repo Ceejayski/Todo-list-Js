@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "Okoli Chijioke",
+        "reviews": "Donec imperdiet congue orci consequat mattis. Donec rutrum porttito sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices ne sed neque.",
+        "img" : "https://preview.colorlib.com/theme/burger/img/testmonial/3.png",
+        "alt": "man", 
+        "star": 5
+    },
+
+    {
+        "id": 1,
+        "name": "Okoli Chijioke",
+        "reviews": "Donec imperdiet congue orci consequat mattis. Donec rutrum porttito sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices ne sed neque.",
+        "img" : "https://preview.colorlib.com/theme/burger/img/testmonial/3.png",
+        "alt": "man", 
+        "star": 5
+    },
+
+    {
+        "id": 2,
+        "name": "Okoli Chijioke",
+        "reviews": "Donec imperdiet congue orci consequat mattis. Donec rutrum porttito sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices ne sed neque.",
+        "img" : "https://preview.colorlib.com/theme/burger/img/testmonial/3.png",
+        "alt": "man", 
+        "star": 5
+    },
+
+    {
+        "id": 3,
+        "name": "Okoli Chijioke",
+        "reviews": "Donec imperdiet congue orci consequat mattis. Donec rutrum porttito sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices ne sed neque.",
+        "img" : "https://preview.colorlib.com/theme/burger/img/testmonial/3.png",
+        "alt": "man", 
+        "star": 5
+    }
+
+]
