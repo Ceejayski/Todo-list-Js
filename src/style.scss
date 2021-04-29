@@ -1,3 +1,71 @@
-main  {
-  font-size: 1em;
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: "handwriting";
+  src: url("./asset/font/IndieFlower-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "pacifico";
+  src: url("./asset/font/Pacifico-Regular.ttf") format("truetype");
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.todo {
+  top: 7%;
+  left: 16%;
+  width: 78%;
+}
+
+.todo-body {
+  margin-top: 40px;
+}
+
+aside {
+  display: block;
+}
+
+.todo-list {
+  width: 650px;
+  font-family: "handwriting",Arial, Helvetica, sans-serif;
+  color: #031f97;
+}
+
+.task-details {
+  width: 430px;
+  height: 400px;
+  background: #fbf3a5;
+  display: table;
+
+  .text {
+    display: table-cell;
+    vertical-align: middle;
+
+    p {
+      margin: 0 auto;
+      width: 200px;
+    }
+  }
+}
+
+.task-list {
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+.todo-check {
+  margin-left: -30px;
+  margin-right: 20px;
+}
+
+.slash{
+  text-decoration: line-through;
 }
