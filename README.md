@@ -4,7 +4,10 @@ Microverse Javascript Curriculum
 
 This is a Microverse project, and this time I was required to create a todo list to put into practice the ES6 and functional programming.
 In this project users can create a project, inside a project, you can create a todo, you can select priority as high, medium , or low.
+## Live Demo
 
+You can find the demo [here](https://relaxed-kirch-dbad3a.netlify.app)
+## Screenshots
 ![Project titles!](screenshot.png)
 
 ![Project and todos!](screenshot2.png)
