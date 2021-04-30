@@ -11,9 +11,12 @@
   "extends": ["airbnb-base"],
   "rules": {
     "no-shadow": "off",
+    "no-restricted-syntax": "off",
+    "guard-for-in":"off",
     "no-param-reassign": "off",
     "eol-last": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "camelcase": "off"
   },
   "ignorePatterns": [
     "dist/",
