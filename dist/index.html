@@ -25,12 +25,16 @@
           </button>
           <div class="collapse bg-light" id="home-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li class="d-flex pt-2"><a href="#" class="link-dark text-center w-100 rounded" id="today">Today's Task</a></li>
-              <li class="d-flex mt-2"><a href="#" class="link-dark text-center w-100 rounded" id="week">Current Week's Task</a>
+              <li class="d-flex pt-2"><a href="#" class="link-dark text-center w-100 rounded" id="today">Today's
+                  Task</a></li>
+              <li class="d-flex mt-2"><a href="#" class="link-dark text-center w-100 rounded" id="week">Current Week's
+                  Task</a>
               </li>
-              <li class="d-flex mt-2"><a href="#" class="link-dark text-center w-100 rounded" id="month">Current Month's Task</a>
+              <li class="d-flex mt-2"><a href="#" class="link-dark text-center w-100 rounded" id="month">Current Month's
+                  Task</a>
               </li>
-              <li class="d-flex mt-2"><a href="#" class="link-dark text-center w-100 rounded" id="overdue">overdue Task</a>
+              <li class="d-flex mt-2"><a href="#" class="link-dark text-center w-100 rounded" id="overdue">overdue
+                  Task</a>
               </li>
               <li class="d-flex mt-2"><a href="#" class="link-dark text-center w-100 rounded" id="all">All Task</a></li>
             </ul>
@@ -100,66 +104,142 @@
                 <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#newTask">
                   <i class="fa fa-plus px-1 text-primary"></i> Create Task</a>
                 </a>
-  
+
                 <!-- Modal -->
-                <div class="modal fade" id="newTask" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <form id="create-form" class="text-dark">
-                        <div class="modal-body">
-                          <div class="form-group mb-2">
-                            <label for="title" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="title" aria-describedby="titleHelp">
-                          </div>
-                          <div class="form-group mb-2">
-                            <label for="description" class="form-label">Description</label>
-                            <textarea type="email" class="form-control" id="description"
-                              aria-describedby="emailHelp"></textarea>
-                          </div>
-                          <div class="form-group mb-2">
-                            <label for="date" class="form-label">Due Date</label>
-                            <input type="date" class="form-control" id="date" aria-describedby="dateHelp">
-                          </div>
-                          <div class="form-group mb-2">
-                            <label for="priority" class="form-label">Priority</label>
-                            <select class="form-select" aria-label="Default select example" id="priority">
-                              <option value="3">High</option>
-                              <option value="2">Mid</option>
-                              <option value="1">Low</option>
-                            </select>
-                          </div>
-                          <div class="form-group mb-2">
-                            <label for="project" class="form-label">Project</label>
-                            <select class="form-select" aria-label="Default select example" id="project">
-                            </select>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <input type="submit" class="btn btn-primary" value="Create Task">
-                        </div>
-                      </form>
+              <div class="modal fade" id="newTask" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <form id="create-form" class="text-dark">
+                      <div class="modal-body">
+                        <div class="form-group mb-2">
+                          <label for="title" class="form-label">Title</label>
+                          <input type="text" class="form-control" id="title" aria-describedby="titleHelp">
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="description" class="form-label">Description</label>
+                          <textarea type="email" class="form-control" id="description"
+                            aria-describedby="emailHelp"></textarea>
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="date" class="form-label">Due Date</label>
+                          <input type="date" class="form-control" id="date" aria-describedby="dateHelp">
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="priority" class="form-label">Priority</label>
+                          <select class="form-select" aria-label="Default select example" id="priority">
+                            <option value="3">High</option>
+                            <option value="2">Mid</option>
+                            <option value="1">Low</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="project" class="form-label">Project</label>
+                          <select class="form-select" aria-label="Default select example" id="project">
+                          </select>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Create Task">
+                      </div>
+                    </form>
                   </div>
                 </div>
+              </div>
               </p>
               <p class="text-center">
                 <a href="#" class="btn btn-sm btn-primary" id="btn_prev">Prev</a>
                 <a href="#" class="btn btn-sm btn-primary" id="btn_next">Next</a>
                 page: <span id="page"></span>
               </p>
-              
-        
+
+
             </div>
           </div>
         </div>
         <div class="task-details mt-4">
           <div class="text">
-            <p> Click any to see Task details</p>
+            <p class="text-center click-message">Click any Task to see Task Details</p>
+            <div class="dnone main-task-details">
+              <div class="mb-3">
+                <p class="title-id"></p>
+                <p class="mb-2 mt-2" id="title-info">Title: <span class="mx-3"></span></p>
+                <p class="mb-2" id="date-info">Due Date: <span class="mx-3"></span></p>
+                <p class="mb-2" id="description-info">Description: <span class="mx-3"></span></p>
+                <p class="mb-2" id="priority-info">Priority: <span class="mx-3"></span></p>
+                <p class="mb-2" id="project-info">Project: <span class="mx-3"></span></p>
+              </div>
+              <div class="d-flex mx-auto w-50 justify-content-between">
+                <div>
+                  <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#editTask" class="btn btn-primary">
+                    <i class="fa fa-edit"></i> Edit
+                  </a>
+
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="editTask" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form id="edit-form" class="text-dark">
+                          <div class="modal-body">
+                            <p class="form-id"></p>
+                            <div class="form-group mb-2">
+                              <label for="edittitle" class="form-label">Title</label>
+                              <input type="text" class="form-control" id="edittitle" aria-describedby="titleHelp">
+                            </div>
+                            <div class="form-group mb-2">
+                              <label for="editdescription" class="form-label">Description</label>
+                              <textarea type="text" class="form-control" id="editdescription"
+                                aria-describedby="emailHelp"></textarea>
+                            </div>
+                            <div class="form-group mb-2">
+                              <label for="editdate" class="form-label">Due Date</label>
+                              <input type="date" class="form-control" id="editdate" aria-describedby="dateHelp">
+                            </div>
+                            <div class="form-check form-switch my-2">
+                              <input class="form-check-input" type="checkbox" id="editstatus">
+                              <label class="form-check-label" for="editstatus">Status</label>
+                            </div>
+                            <div class="form-group mb-2">
+                              <label for="editpriority" class="form-label">Priority</label>
+                              <select class="form-select" aria-label="Default select example" id="editpriority">
+                                <option value="3">High</option>
+                                <option value="2">Mid</option>
+                                <option value="1">Low</option>
+                              </select>
+                            </div>
+                            <div class="form-group mb-2">
+                              <label for="editproject" class="form-label">Project</label>
+                              <select class="form-select" aria-label="Default select example" id="editproject">
+                              </select>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Create Task">
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-danger delete-task"><i class="fa fa-trash"></i> Delete</button>
+                </div>
+              </div>
+            </div>
+
+
+
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 class Project {
   static getProject() {
     let projects;
-    if (localStorage.getItem("projects") === null) {
-      projects = ["Default"];
+    if (localStorage.getItem('projects') === null) {
+      projects = ['Default'];
     } else {
-      projects = JSON.parse(localStorage.getItem("projects"));
+      projects = JSON.parse(localStorage.getItem('projects'));
     }
     return projects;
   }
@@ -14,32 +14,31 @@ class Project {
 
     projects.push(name);
 
-    localStorage.setItem("projects", JSON.stringify(projects));
+    localStorage.setItem('projects', JSON.stringify(projects));
   }
 
   static displayProjects() {
     const projects = Project.getProject();
-    const projectList = document.querySelector('.project-nav-list')
+    const projectList = document.querySelector('.project-nav-list');
 
     for (const index in projects) {
-      let projectLink = document.createElement('li')
-      projectLink.className = 'd-flex pt-2'
-      projectLink.innerHTML = `<a href="#" class="link-dark text-center w-100 rounded" id="project${index}">${projects[index]}</a>`
-      projectList.appendChild(projectLink)
+      const projectLink = document.createElement('li');
+      projectLink.className = 'd-flex pt-2';
+      projectLink.innerHTML = `<a href="#" class="link-dark text-center w-100 rounded" id="project${index}">${projects[index]}</a>`;
+      projectList.appendChild(projectLink);
     }
-    console.log(typeof(projects[0]))
   }
 
   static projectSelcectOption() {
-    const select = document.getElementById('project')
+    const select = document.getElementById('project');
+    const editSelect = document.getElementById('editproject');
     const projects = Project.getProject();
-    for (const index in projects){
-
-      let projectOption = document.createElement('option')
-      projectOption.value = index
-      projectOption.textContent = projects[index]
-      select.appendChild(projectOption)
-      console.log(index)
+    for (const index in projects) {
+      const projectOption = document.createElement('option');
+      projectOption.value = index;
+      projectOption.textContent = projects[index];
+      select.appendChild(projectOption);
+      editSelect.innerHTML = select.innerHTML;
     }
   }
 }
