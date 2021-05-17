@@ -44,6 +44,9 @@ class UI {
     } else {
       this.showAlert('Project Added', 'alert-sucess');
       Project.addProject(name);
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
     }
   }
 
@@ -61,6 +64,9 @@ class UI {
       e.preventDefault();
     } else {
       task = new Task(title, description, date, priority, project, id);
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
     }
     return task;
   }

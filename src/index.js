@@ -31,10 +31,6 @@ document.getElementById('newProjectForm').addEventListener('submit', (e) => {
 
   // Project.addProject(projectName);
   UI.projectValidator(projectName, e);
-
-  setTimeout(() => {
-    window.location.reload();
-  }, 100);
 });
 
 document.getElementById('create-form').addEventListener('submit', (e) => {
@@ -49,10 +45,6 @@ document.getElementById('create-form').addEventListener('submit', (e) => {
   // Store.addTask(task);
   const taskNew = UI.taskValidator(e, title, description, date, priority, project, curr_id);
   Store.addTask(taskNew);
-
-  setTimeout(() => {
-    window.location.reload();
-  }, 100);
 });
 
 document.getElementById('edit-form').addEventListener('submit', (e) => {
