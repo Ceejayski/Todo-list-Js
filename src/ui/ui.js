@@ -50,11 +50,10 @@ class UI {
     }
   }
 
-  static taskValidator(e, title, description, date, priority, project, id) {
+  static taskValidator(e, title, description, date, priority, project, id, type = 'new', index = 0) {
     const varDate = new Date(date);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    let task;
     if (title === '' || description === '' || date === '') {
       this.showAlert('Please Fill all Fields', 'alert-danger');
       e.preventDefault();
@@ -63,12 +62,16 @@ class UI {
       date = '';
       e.preventDefault();
     } else {
-      task = new Task(title, description, date, priority, project, id);
+      let task = new Task(title, description, date, priority, project, id);
+      if (type === 'new'){
+        Store.addTask(task);
+      }else if(type === 'edit'){
+        Store.storeUpdate(index, task);
+      }
       setTimeout(() => {
         window.location.reload();
       }, 100);
     }
-    return task;
   }
 
   static checkBox(target) {
@@ -172,8 +175,7 @@ class UI {
     if (idP.id != null) {
       id = parseInt(idP.id.replace('form', ''), 10);
       const index = this.findWithId(mainArr, id);
-      const taskNe = this.taskValidator(e, title, description, date, priority, project, id, status);
-      Store.storeUpdate(index, taskNe);
+      this.taskValidator(e, title, description, date, priority, project, id, status, 'edit', index);
     }
   }
 }

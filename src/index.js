@@ -39,12 +39,12 @@ document.getElementById('create-form').addEventListener('submit', (e) => {
   const date = document.getElementById('date').value;
   const priority = document.getElementById('priority').value;
   const project = document.getElementById('project').value;
-  const curr_id = mainArr.length + 1;
+  const curr_id = Store.getID()
+  Store.setID()
 
   // const task = new Task(title, description, date, priority, project);
   // Store.addTask(task);
-  const taskNew = UI.taskValidator(e, title, description, date, priority, project, curr_id);
-  Store.addTask(taskNew);
+  UI.taskValidator(e, title, description, date, priority, project, curr_id);
 });
 
 document.getElementById('edit-form').addEventListener('submit', (e) => {
