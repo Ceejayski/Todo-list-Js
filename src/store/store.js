@@ -12,19 +12,19 @@ class Store {
   static getID() {
     let id;
     if (localStorage.getItem('taskId') === null) {
-      id = 0
+      id = 0;
     } else {
-      id = parseInt(localStorage.getItem('taskId'), 10)
+      id = parseInt(localStorage.getItem('taskId'), 10);
     }
-    return id
+    return id;
   }
 
   static setID() {
-    let id = this.getID();
+    const id = this.getID();
 
-    let newID = id + 1
+    const newID = id + 1;
 
-    localStorage.setItem('taskId', newID)
+    localStorage.setItem('taskId', newID);
   }
 
   static addTask(task) {
