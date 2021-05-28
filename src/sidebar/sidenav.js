@@ -97,7 +97,11 @@ const Aside = () => {
 
   return {
     arrSelector,
-    firstArr,
+    todayArr,
+    weekArr,
+    monthArr,
+    overDueArr,
+    projectArrfunc
   };
 };
 

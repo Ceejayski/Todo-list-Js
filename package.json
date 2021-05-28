@@ -47,9 +47,10 @@
     "moment": "^2.29.1",
     "ts-jest": "^27.0.1"
   },
-
   "jest": {
     "resetMocks": false,
-    "setupFiles": ["jest-localstorage-mock"]
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
   }
 }
