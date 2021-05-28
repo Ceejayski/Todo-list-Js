@@ -32,9 +32,15 @@ aside {
   display: block;
 }
 
+.task-list {
+  p {
+    margin-bottom: 30px;
+  }
+}
+
 .todo-list {
   width: 650px;
-  font-family: "handwriting",Arial, Helvetica, sans-serif;
+  font-family: "handwriting", Arial, Helvetica, sans-serif;
   color: #031f97;
 }
 
@@ -55,18 +61,12 @@ aside {
   }
 }
 
-.task-list {
-  p {
-    margin-bottom: 30px;
-  }
-}
-
 .todo-check {
   margin-left: -30px;
   margin-right: 20px;
 }
 
-.slash{
+.slash {
   text-decoration: line-through;
 }
 
@@ -77,9 +77,9 @@ aside {
 
 .w-90 {
   width: 90%;
-} 
+}
 
-.dnone{
+.dnone {
   display: none;
 }
 

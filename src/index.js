@@ -7,7 +7,6 @@ import Aside from './sidebar/sidenav';
 
 const body = document.getElementsByTagName('body')[0];
 let page = new Pagination(Aside().arrSelector());
-const mainArr = Object.values(Store.getTask());
 const asideTag = document.getElementsByTagName('aside')[0];
 Project.projectSelcectOption();
 
@@ -39,8 +38,8 @@ document.getElementById('create-form').addEventListener('submit', (e) => {
   const date = document.getElementById('date').value;
   const priority = document.getElementById('priority').value;
   const project = document.getElementById('project').value;
-  const curr_id = Store.getID()
-  Store.setID()
+  const curr_id = Store.getID();
+  Store.setID();
 
   // const task = new Task(title, description, date, priority, project);
   // Store.addTask(task);

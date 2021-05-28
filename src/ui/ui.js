@@ -62,10 +62,10 @@ class UI {
       date = '';
       e.preventDefault();
     } else {
-      let task = new Task(title, description, date, priority, project, id);
-      if (type === 'new'){
+      const task = new Task(title, description, date, priority, project, id);
+      if (type === 'new') {
         Store.addTask(task);
-      }else if(type === 'edit'){
+      } else if (type === 'edit') {
         Store.storeUpdate(index, task);
       }
       setTimeout(() => {

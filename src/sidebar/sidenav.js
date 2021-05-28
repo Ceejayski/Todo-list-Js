@@ -93,11 +93,13 @@ const Aside = () => {
     return arr;
   };
 
-  const firstArr = sortArrByPriority(todayArr);
-
   return {
     arrSelector,
-    firstArr,
+    todayArr,
+    weekArr,
+    monthArr,
+    overDueArr,
+    projectArrfunc,
   };
 };
 
